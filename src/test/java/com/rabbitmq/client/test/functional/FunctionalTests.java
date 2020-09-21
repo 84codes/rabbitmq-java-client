@@ -33,7 +33,7 @@ import org.junit.runners.Suite;
 	BindingLifecycle.class,
 	Recover.class,
 	Reject.class,
-	Transactions.class,
+	//Transactions.class,
 	RequeueOnConnectionClose.class,
 	RequeueOnChannelClose.class,
 	DurableOnTransient.class,
