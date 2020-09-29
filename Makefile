@@ -1,4 +1,4 @@
-MVN ?= mvn
+MVN ?= ./mvnw
 MVN_FLAGS ?=
 
 ifndef DEPS_DIR
