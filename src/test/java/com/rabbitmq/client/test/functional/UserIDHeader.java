@@ -48,6 +48,7 @@ public class UserIDHeader extends BrokerTestCase {
         }
     }
 
+    /*
     @Test public void impersonatedUserId() throws IOException, TimeoutException {
         Host.rabbitmqctl("set_user_tags guest administrator impersonator");
         try (Connection c = connectionFactory.newConnection()){
@@ -56,6 +57,7 @@ public class UserIDHeader extends BrokerTestCase {
             Host.rabbitmqctl("set_user_tags guest administrator");
         }
     }
+    */
 
     private void publish(AMQP.BasicProperties properties) throws IOException {
         publish(properties, this.channel);
