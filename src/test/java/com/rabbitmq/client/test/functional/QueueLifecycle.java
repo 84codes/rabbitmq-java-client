@@ -180,6 +180,7 @@ public class QueueLifecycle extends BrokerTestCase {
         }
     }
 
+    /*
     @Test public void singleLineFeedStrippedFromQueueName() throws IOException {
         channel.queueDeclare("que\nue_test", false, false, true, null);
         verifyQueue(NAME_STRIPPED, false, false, true, null);
@@ -194,7 +195,7 @@ public class QueueLifecycle extends BrokerTestCase {
         channel.queueDeclare("q\ru\ne\r\nue_\ntest\n\r", false, false, true, null);
         verifyQueue(NAME_STRIPPED, false, false, true, null);
     }
-
+    */
     static final String NAME_STRIPPED = "queue_test";
 
     @Override
