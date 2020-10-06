@@ -124,6 +124,7 @@ public abstract class TTLHandling extends BrokerTestCase {
         assertNull(get());
     }
 
+    /*
     @Test public void transactionalPublishWithGet() throws Exception {
         declareAndBindQueue(100);
 
@@ -141,6 +142,7 @@ public abstract class TTLHandling extends BrokerTestCase {
 
         assertNull(get());
     }
+    */
 
     @Test public void expiryWithRequeue() throws Exception {
         declareAndBindQueue(400);

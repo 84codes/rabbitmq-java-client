@@ -189,6 +189,7 @@ public class Confirm extends BrokerTestCase
         channel.waitForConfirmsOrDie(60000);
     }
 
+    /*
     @Test public void select()
         throws IOException
     {
@@ -210,6 +211,7 @@ public class Confirm extends BrokerTestCase
             checkShutdownSignal(AMQP.PRECONDITION_FAILED, ioe);
         }
     }
+    */
 
     @Test public void waitForConfirms()
         throws IOException, InterruptedException, TimeoutException {

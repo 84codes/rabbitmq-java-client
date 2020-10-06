@@ -142,6 +142,7 @@ public class QosTests extends BrokerTestCase
         drain(c2, 1);
     }
 
+    /*
     @Test public void permutations()
         throws IOException
     {
@@ -158,6 +159,7 @@ public class QosTests extends BrokerTestCase
             }
         }
     }
+    */
 
     @Test public void fairness()
         throws IOException

@@ -264,6 +264,7 @@ public class Routing extends BrokerTestCase
         }
     }
 
+    /*
     @Test public void basicReturnTransactional() throws IOException {
         channel.txSelect();
         channel.addReturnListener(makeReturnListener());
@@ -291,6 +292,7 @@ public class Routing extends BrokerTestCase
         checkReturn(AMQP.NO_ROUTE);
         channel.queueDeclare(Q1, false, false, false, null);
     }
+    */
 
     protected ReturnListener makeReturnListener() {
         return new ReturnListener() {
