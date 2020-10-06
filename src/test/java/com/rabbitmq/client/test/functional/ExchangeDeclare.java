@@ -46,6 +46,7 @@ public class ExchangeDeclare extends ExchangeEquivalenceBase {
         verifyEquivalent(NAME, TYPE, false, false, null);
     }
 
+    /*
     @Test public void singleLineFeedStrippedFromExchangeName() throws IOException {
         channel.exchangeDeclare("exchange_test\n", TYPE, false, false, null);
         verifyEquivalent(NAME, TYPE, false, false, null);
@@ -60,6 +61,7 @@ public class ExchangeDeclare extends ExchangeEquivalenceBase {
         channel.exchangeDeclare("e\nxc\rhange\n\r_test\n\r", TYPE, false, false, null);
         verifyEquivalent(NAME, TYPE, false, false, null);
     }
+    */
 
     @Test public void exchangeNonsenseArgsEquivalent() throws IOException {
         channel.exchangeDeclare(NAME, TYPE, false, false, null);
