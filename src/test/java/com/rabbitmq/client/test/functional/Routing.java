@@ -254,14 +254,7 @@ public class Routing extends BrokerTestCase
 
         //'immediate' publish
         channel.basicPublish("", Q1, false, true, null, "immediate".getBytes());
-        try {
-            channel.basicQos(0); //flush
-            fail("basic.publish{immediate=true} should not be supported");
-        } catch (IOException ioe) {
-            checkShutdownSignal(AMQP.NOT_IMPLEMENTED, ioe);
-        } catch (AlreadyClosedException ioe) {
-            checkShutdownSignal(AMQP.NOT_IMPLEMENTED, ioe);
-        }
+        assertEquals((int)returnCell.uninterruptibleGet(), 313);
     }
 
     /*
