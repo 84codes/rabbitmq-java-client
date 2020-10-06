@@ -405,6 +405,7 @@ public class Metrics extends BrokerTestCase {
         }
     }
 
+    /*
     @Test public void checkListenersWithAutoRecoveryConnection() throws Exception {
         ConnectionFactory connectionFactory = createConnectionFactory();
         connectionFactory.setNetworkRecoveryInterval(2000);
@@ -434,7 +435,9 @@ public class Metrics extends BrokerTestCase {
             safeClose(connection);
         }
     }
+    */
 
+    /*
     @Test public void checkAcksWithAutomaticRecovery() throws Exception {
         ConnectionFactory connectionFactory = createConnectionFactory();
         connectionFactory.setNetworkRecoveryInterval(2000);
@@ -479,6 +482,7 @@ public class Metrics extends BrokerTestCase {
             safeClose(connection);
         }
     }
+    */
 
     private static ConnectionFactory createConnectionFactory() {
         ConnectionFactory connectionFactory = TestUtils.connectionFactory();
