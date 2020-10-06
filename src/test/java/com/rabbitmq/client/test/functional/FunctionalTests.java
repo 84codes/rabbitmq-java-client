@@ -51,7 +51,7 @@ import org.junit.runners.Suite;
     QueueExclusivity.class,
     QueueSizeLimit.class,
     InvalidAcks.class,
-    InvalidAcksTx.class,
+    //InvalidAcksTx.class,
     DefaultExchange.class,
     UnbindAutoDeleteExchange.class,
     Confirm.class,
