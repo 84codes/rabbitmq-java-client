@@ -195,9 +195,9 @@ public abstract class TTLHandling extends BrokerTestCase {
         QueueingConsumer.Delivery d = c.nextDelivery(100);
         assertNotNull(d);
 
-        // requeued messages should expire
+        // requeued messages should not expire
         channel.basicReject(d.getEnvelope().getDeliveryTag(), true);
-        assertNull(c.nextDelivery(100));
+        assertNotNull(c.nextDelivery(100));
     }
 
     protected void expectBodyAndRemainingMessages(String body, int messagesLeft) throws IOException {
