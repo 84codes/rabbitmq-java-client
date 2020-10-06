@@ -109,13 +109,13 @@ public abstract class TTLHandling extends BrokerTestCase {
     }
 
     @Test public void publishAndGetWithExpiry() throws Exception {
-        declareAndBindQueue(200);
+        declareAndBindQueue(2000);
 
         publish(MSG[0]);
-        Thread.sleep(150);
+        Thread.sleep(1500);
 
         publish(MSG[1]);
-        Thread.sleep(100);
+        Thread.sleep(1000);
 
         publish(MSG[2]);
 
@@ -145,10 +145,10 @@ public abstract class TTLHandling extends BrokerTestCase {
     */
 
     @Test public void expiryWithRequeue() throws Exception {
-        declareAndBindQueue(400);
+        declareAndBindQueue(4000);
 
         publish(MSG[0]);
-        Thread.sleep(200);
+        Thread.sleep(2000);
         publish(MSG[1]);
         publish(MSG[2]);
 
@@ -158,7 +158,7 @@ public abstract class TTLHandling extends BrokerTestCase {
         closeChannel();
         openChannel();
 
-        Thread.sleep(300);
+        Thread.sleep(3000);
         expectBodyAndRemainingMessages(MSG[1], 1);
         expectBodyAndRemainingMessages(MSG[2], 0);
     }
